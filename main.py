@@ -871,6 +871,7 @@ class GUI:
     
     # no gui mode
     def train(self, iters=500):
+        print("===================学習開始====================")
         if iters > 0:
             self.prepare_train()
             for i in tqdm.trange(iters):
