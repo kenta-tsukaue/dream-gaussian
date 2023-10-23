@@ -1,45 +1,36 @@
-# DreamGaussian
+# DreamGaussian(ドリームガウシアン)
 
-This repository contains the official implementation for [DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content Creation](https://arxiv.org/abs/2309.16653).
+論文[DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content Creation](https://arxiv.org/abs/2309.16653)の実装コード.
 
 ### [Project Page](https://dreamgaussian.github.io) | [Arxiv](https://arxiv.org/abs/2309.16653)
 
 
 https://github.com/dreamgaussian/dreamgaussian/assets/25863658/db860801-7b9c-4b30-9eb9-87330175f5c8
 
-### News
-* 2023.10.21: add experimental support for [MVDream](https://github.com/bytedance/MVDream).
 
-### [Colab demo](https://github.com/camenduru/dreamgaussian-colab)
-* Image-to-3D: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sLpYmmLS209-e5eHgcuqdryFRRO6ZhFS?usp=sharing)
-* Text-to-3D: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/dreamgaussian-colab/blob/main/dreamgaussian_colab.ipynb)
-
-### [Gradio demo](https://huggingface.co/spaces/jiawei011/dreamgaussian)
-* Image-to-3D: <a href="https://huggingface.co/spaces/jiawei011/dreamgaussian"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Gradio%20Demo-Huggingface-orange"></a>
-
-## Install
+## 環境構築
 ```bash
 pip install -r requirements.txt
 
-# a modified gaussian splatting (+ depth, alpha rendering)
+# aussian splattingのインストール
 git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
 pip install ./diff-gaussian-rasterization
 
-# simple-knn
+# simple-knnのインストール
 pip install ./simple-knn
 
-# nvdiffrast
+# nvdiffrastのインストール
 pip install git+https://github.com/NVlabs/nvdiffrast/
 
-# kiuikit
+# kiuikitのインストール
 pip install git+https://github.com/ashawkey/kiuikit
 ```
 
-Tested on:
-* Ubuntu 22 with torch 1.12 & CUDA 11.6 on a V100.
-* Windows 10 with torch 2.1 & CUDA 12.1 on a 3070.
+動作環境:
+* Ubuntu 22 with torch 2.1 & CUDA 12.2.
+* Windows 10 with torch 2.1 & CUDA 12.1.
 
-## Usage
+## 実行コマンド
 
 Image-to-3D:
 ```bash
